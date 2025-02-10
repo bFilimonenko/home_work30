@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Regular expressions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+<div class="form_wrapper">
+  <h1>Registration</h1>
+  <form name="registration">
+
+    <div class="name">
+      <input type="text" name="firstName" placeholder="First Name">
+    </div>
+    <div class="name">
+      <input type="text" name="lastName" placeholder="Last Name">
+    </div>
+    <div class="data">
+      <input type="text" name="dateOfBirth" placeholder="Date of birth YYYY/MM/DD">
+      <span class="data-warning hidden">Invalid date or must be 7+</span>
+    </div>
+    <div class="gender">
+      <input type="radio" name="gender" id="male">
+      <label for="male">Male</label>
+
+      <input type="radio" name="gender" id="female">
+      <label for="female">Female</label>
+
+      <span class="gender-warning hidden">Select a gender</span>
+
+    </div>
+
+    <div class="city">
+      <select name="city">
+        <option value="">Select your city</option>
+        <option value="Kyiv">Київ</option>
+        <option value="Odesa">Одеса</option>
+        <option value="Kharkiv">Харків</option>
+        <option value="Zaporizhzhia">Запоріжжя</option>
+        <option value="Dnipro">Дніпро</option>
+        <option value="Uzhhorod">Ужгород</option>
+        <option value="Lviv">Львів</option>
+      </select>
+    </div>
+
+    <div class="address">
+      <!--обл. *** м./с. *** вул. *** буд. ***-->
+      <textarea name="address" placeholder="Enter the address"></textarea>
+    </div>
+
+    <div class="languages">
+      <p>Choose the language(s) you speak</p>
+      <div>
+        <input type="checkbox" name="language" id="English" value="English">
+        <label for="English">English</label>
+      </div>
+      <div>
+        <input type="checkbox" name="language" id="Ukrainian" value="Ukrainian">
+        <label for="Ukrainian">Ukrainian</label>
+      </div>
+      <div>
+        <input type="checkbox" name="language" id="German" value="German">
+        <label for="German">German</label>
+      </div>
+      <div>
+        <input type="checkbox" name="language" id="French" value="French">
+        <label for="French">French</label>
+      </div>
+      <div>
+        <input type="checkbox" name="language" id="Polish" value="Polish">
+        <label for="Polish">Polish</label>
+      </div>
+    </div>
+
+    <div>
+      <button type="button" name="button">SEND</button>
+    </div>
+
+  </form>
+</div>
+
+<div class="notification hidden error">Fields are not filled in correctly</div>
+<div class="notification hidden success">Data successfully sent</div>
+
+
+<script src="js/formValidation.js"></script>
+<!--<script src="js/1.js"></script>-->
+<!--<script src="js/2.js"></script>-->
+</body>
+</html>
